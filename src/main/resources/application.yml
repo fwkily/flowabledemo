@@ -1,9 +1,19 @@
-#
-#spring:
-#  datasource:
-#    druid:
-#      url: jdbc:mysql://114.116.9.97:3306/fwkdb?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
-#      username: root
-#      password: 1qw2!QW@
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    type: com.alibaba.druid.pool.DruidDataSource
+
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://114.116.9.97:3306/fwkdb2?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true
+      username: root
+      password: 1qw2!QW@
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  liquibase:
+    enabled: false
+#  mvc:
+#    pathmatch:
+#      matching-strategy: ant_path_matcher
+
+logging:
+  config: classpath:log4j2.xml
+flowable:
+  async-executor-activate: false
